@@ -11,11 +11,15 @@ import UIKit
 class TouchButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setupButton()
     }
     
     private func setupButton() {
         self.layer.cornerRadius = self.frame.height / 2
-        self.setTitleColor(.white, for: .normal)
+        self.setTitleColor(.black, for: .normal)
     }
 }

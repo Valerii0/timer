@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
+
+class StoredInfo: Object {
+    @objc dynamic var time: String = ""
+    @objc dynamic var info: String = ""
+    
+    convenience init(time: String, info: String) {
+        self.init()
+        
+        self.time = time
+        self.info = info
+    }
+}
